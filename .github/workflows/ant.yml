@@ -22,5 +22,7 @@ jobs:
     - name: List dist folder for debug
       run: ls -l dist || echo "no dist folder found"
 
-    - name: Build with Ant
-      run: ant
+    - name: Build with Ant (with dist/lib jars in CLASSPATH)
+      run: |
+        export CLASSPATH=dist/lib/*:$CLASSPATH
+        ant
