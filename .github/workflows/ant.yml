@@ -19,10 +19,10 @@ jobs:
         distribution: 'temurin'
         java-version: '21'
 
-    - name: List dist folder for debug
+    - name: List dist/lib folder for debug
       run: |
-        ls -l dist || echo "no dist folder found"
-        ls -l dist/lib || echo "no lib folder found in dist"
+        ls -l dist || echo "dist folder not found"
+        ls -l dist/lib || echo "dist/lib folder not found"
 
     - name: Build with Ant (with dist/lib jars in CLASSPATH)
       run: |
