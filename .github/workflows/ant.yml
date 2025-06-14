@@ -19,5 +19,8 @@ jobs:
         distribution: 'temurin'
         java-version: '21'
 
+    - name: List dist folder for debug
+      run: ls -l dist || echo "no dist folder found"
+
     - name: Build with Ant
       run: ant
