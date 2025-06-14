@@ -20,7 +20,9 @@ jobs:
         java-version: '21'
 
     - name: List dist folder for debug
-      run: ls -l dist || echo "no dist folder found"
+      run: |
+        ls -l dist || echo "no dist folder found"
+        ls -l dist/lib || echo "no lib folder found in dist"
 
     - name: Build with Ant (with dist/lib jars in CLASSPATH)
       run: |
